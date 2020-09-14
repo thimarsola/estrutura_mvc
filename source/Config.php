@@ -16,7 +16,7 @@ define("SITE",[
     "desc" => "Goognet Solução Digital",
     "domain" => "goognet.com.br",
     "locale" => "pt_BR",
-    "root" => "https://localhost/desenvolvimento/cursos/est_mvc/"
+    "root" => "https://localhost/desenvolvimento/cursos/est_mvc"
 ]);
 
 /**

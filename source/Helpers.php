@@ -32,12 +32,25 @@ function routeImage(string $imageUrl): string
  */
 function asset(string $path, $time = true): string
 {
-    $file = SITE["root"] . "public/assets/{$path}";
+    $file = SITE["root"] . "/public/assets/{$path}";
     $fileOnDir = dirname(__DIR__, 1) . "/public/assets/{$path}";
-    
-    if ($time && file_exists($fileOnDir)){
+
+    if ($time && file_exists($fileOnDir)) {
         $file .= "?time=" . filemtime($fileOnDir);
     }
     return $file;
 }
 
+/**
+ * 
+ * @param string|null $uri
+ * @return string
+ */
+function url(string $uri = null): string
+{
+    if ($uri) {
+        return site("root") . "/{$uri}";
+    }
+
+    return site("root");
+}

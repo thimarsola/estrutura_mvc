@@ -4,5 +4,5 @@
     <link rel="stylesheet" href="<?= asset("/css/estilos.css"); ?>" />
 <?= $v->end; ?>
 
-<h1><?= SITE["name"]; ?></h1>
+<h1>Contato</h1>
 

@@ -1,10 +1,10 @@
-<!--header-->
-<?php require "_header.php"; ?>
-<!--end of header-->
+<?php $v->layout("_theme"); ?>
 
-<h1><?= SITE["name"]; ?></h1>
+<?= $v->start("stylesheet"); ?>
+    <link rel="stylesheet" href="<?= asset("/css/error.css"); ?>" />
+<?= $v->end; ?>
+
+    <h1><?= "Erro " . $error; ?></h1>
 
 
-<!--footer-->
-<?php require "_footer.php"; ?>
-<!--end of footer-->
+

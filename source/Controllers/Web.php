@@ -2,52 +2,65 @@
 
 namespace Source\Controllers;
 
+use League\Plates\Engine;
+
 class Web extends Controller
 {
-    public function __construct($router)
-    {
-        parent::__construct($router);
-        
-        if (!empty($_SESSION["user"])){
-            $this->router->redirect("app.home");
-        }
-    }
-    
+
+    /**
+     * HOME
+     */
     public function home(): void
     {
-        $style = "css/estilos.css";
 
         $head = $this->seo->optimize(
-            site("name"), 
-            site("desc"), 
-            $this->router->route("web.home"), 
-            routeImage("Home")
-        )->render();
-        
+                        site("name"),
+                        site("desc"),
+                        $this->router->route("web.home"),
+                        routeImage("Home")
+                )->render();
+
         echo $this->view->render("home", [
             "head" => $head,
-            "style" => $style
         ]);
-        
     }
-    
+
+    /**
+     * CONTATO
+     */
+    public function contato(): void
+    {
+
+        $head = $this->seo->optimize(
+                        site("name"),
+                        site("desc"),
+                        $this->router->route("web.contato"),
+                        routeImage("Contato")
+                )->render();
+
+        echo $this->view->render("contato", [
+            "head" => $head,
+        ]);
+    }
+
+    /**
+     * ERRO
+     */
     public function error($data): void
     {
         $error = filter_var($data["errcode"], FILTER_VALIDATE_INT);
-        
-        $style = "css/error.css";
-        
+
         $head = $this->seo->optimize(
-            "Ooops - Erro {$error} | " . site("name"), 
-            site("desc"), 
-            $this->router->route("web.error", ["errcode" => $error]), 
-            routeImage($error)
-        )->render();
-        
+                        "Ooops - Erro {$error} | " . site("name"),
+                        site("desc"),
+                        $this->router->route("web.error", ["errcode" => $error]),
+                        routeImage($error)
+                )->render();
+
         echo $this->view->render("error", [
             "head" => $head,
-            "style" => $style,
             "error" => $error
         ]);
     }
+
 }

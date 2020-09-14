@@ -15,7 +15,7 @@ $router->namespace("Source\Controllers");
  */
 $router->group(null);
 $router->get("/", "Web:home", "web.home");
-$router->get("/sobre", "Web:about", "web.about");
+$router->get("/contato", "Web:contato", "web.contato");
 
 ob_end_flush();
 
