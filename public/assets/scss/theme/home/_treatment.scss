@@ -1,0 +1,63 @@
+.treatment{
+    @include margin;
+    background:{
+        image: url("../img/bg-treatment.png");
+        size: cover;
+        position: bottom;
+    }
+
+    &__container{
+        margin: 0 auto;
+        padding: 0;
+        max-width: 87rem;
+
+        &__header{
+            margin-bottom: 6rem;
+            padding: 0;
+
+            p{
+                @include marginSet;
+                font:{
+                    size: 2rem;
+                }
+                text:{
+                    transform: uppercase;
+                }
+                letter-spacing: 4px;
+                color: var(--color-theme-primary);
+            }
+
+            h1{
+                margin: 3.2rem 0 6rem 0;
+                padding: 0;
+                font:{
+                    size: 6rem;
+                }
+                line-height: 1;
+            }
+
+            hr{
+                margin: 0 auto;
+                width: 14rem;
+                border-color: var(--color-theme-primary);
+            }
+        }
+
+        &__content{
+            @include marginSet;
+            text:{
+                align: center;
+            }
+
+            p{
+                text:{
+                    align: justify;
+                }
+            }
+
+            a{
+                margin-top: 6rem;
+            }
+        }
+    }
+}

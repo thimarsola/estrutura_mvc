@@ -1,0 +1,25 @@
+{
+    "name": "estrutura_mvc",
+    "version": "1.0.0",
+    "description": "Estrutura de desenvolvimento mvc",
+    "main": "index.js",
+    "scripts": {
+        "start": "sass ./public/assets/scss/:./public/assets/css/ --watch"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/thimarsola/estrutura_mvc.git"
+    },
+    "author": "Thiago Marsola | Goognet Solução Digital",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/thimarsola/estrutura_mvc/issues"
+    },
+    "homepage": "https://github.com/thimarsola/estrutura_mvc#readme",
+    "devDependencies": {
+        "gulp": "^4.0.2",
+        "gulp-image": "^6.2.1",
+        "gulp-watch": "^5.0.1",
+        "gulp-webp": "^4.0.1"
+    }
+}

@@ -11,18 +11,19 @@ define("DEV", [
 /**
  * SITE CONFIG
  */
-define("SITE",[
-   "name" => "Goognet Solução Digital",
-    "desc" => "Goognet Solução Digital",
-    "domain" => "goognet.com.br",
+define("SITE", [
+    "name" => "Name",
+    "desc" => "Description",
+    "domain" => "domain",
     "locale" => "pt_BR",
-    "root" => "https://localhost/desenvolvimento/cursos/est_mvc"
+    "lang" => "pt-BR",
+    "root" => "https://localhost/domain.com.br"
 ]);
 
 /**
  * SITE MINIFY
  */
-if ($_SERVER["SERVER_NAME"] == "localhost"){
+if ($_SERVER["SERVER_NAME"] == "localhost") {
     require __DIR__ . '/Minifier.php';
 }
 
@@ -47,32 +48,32 @@ define("DATA_LAYER_CONFIG", [
 /**
  * SOCIAL CONFIG
  */
-define("SOCIAL",[
+define("SOCIAL", [
     "facebook_page" => "goognetsolucao",
     "facebook_author" => "goognetsolucao",
     "facebook_appId" => "",
-    "twitter_creator" => "@",
-    "twitter_site" => "@"
+    "twitter_creator" => "@GoognetSolucao",
+    "twitter_site" => "@GoognetSolucao"
 ]);
 
 /**
  * MAIL CONNECT
  */
 define("MAIL", [
-    "host" => "mail.goognet.com.br",
+    "host" => "mail.domain.com.br",
     "port" => "587",
-    "user" => "sender@goognet.com.br",
-    "passwd" => "Contato123*",
-    "from_name" => "Website Lojas Emofer",
-    "from_email" => "emofer@emofer.com.br"
+    "user" => "sender@domain.com.br",
+    "passwd" => "password",
+    "from_name" => "Website Domain",
+    "from_email" => "domain@domain.com.br"
 ]);
 
 /**
  * REGION
  */
 define("REGION", [
-   "region" => "xxx",
-    "placename" => "xxx",
-    "position" => "xxx",
-    "icbm" => "xxx"
+    "region" => "BR-SP",
+    "placename" => "S&atilde;o Paulo",
+    "position" => "-23.550651;-46.633382",
+    "icbm" => "-23.550651, -46.633382"
 ]);

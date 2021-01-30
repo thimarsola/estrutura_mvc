@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: http://www.domain.com.br/robots.txt
+Sitemap: http://www.domain.com.br/sitemap.xml

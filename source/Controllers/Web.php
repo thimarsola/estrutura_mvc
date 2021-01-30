@@ -14,11 +14,11 @@ class Web extends Controller
     {
 
         $head = $this->seo->optimize(
-                        site("name"),
-                        site("desc"),
-                        $this->router->route("web.home"),
-                        routeImage("Home")
-                )->render();
+            site("name"),
+            site("desc"),
+            $this->router->route("web.home"),
+            routeImage("Home")
+        )->render();
 
         echo $this->view->render("home", [
             "head" => $head,
@@ -32,11 +32,11 @@ class Web extends Controller
     {
 
         $head = $this->seo->optimize(
-                        site("name"),
-                        site("desc"),
-                        $this->router->route("web.contato"),
-                        routeImage("Contato")
-                )->render();
+            site("name"),
+            site("desc"),
+            $this->router->route("web.contato"),
+            routeImage("Contato")
+        )->render();
 
         echo $this->view->render("contato", [
             "head" => $head,
@@ -51,16 +51,15 @@ class Web extends Controller
         $error = filter_var($data["errcode"], FILTER_VALIDATE_INT);
 
         $head = $this->seo->optimize(
-                        "Ooops - Erro {$error} | " . site("name"),
-                        site("desc"),
-                        $this->router->route("web.error", ["errcode" => $error]),
-                        routeImage($error)
-                )->render();
+            "Ooops - Erro {$error} | " . site("name"),
+            site("desc"),
+            $this->router->route("web.error", ["errcode" => $error]),
+            routeImage($error)
+        )->render();
 
         echo $this->view->render("error", [
             "head" => $head,
             "error" => $error
         ]);
     }
-
 }

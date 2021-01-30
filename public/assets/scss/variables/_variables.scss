@@ -1,0 +1,15 @@
+// ==========================================================================
+// Colors
+// ==========================================================================
+$theme-colors: () !default;
+$theme-colors: map_merge(('theme-primary': #BF0303,
+'theme-text': #fff,
+'theme-white': #fff,
+'theme-developer': #81D00B,
+), $theme-colors);
+
+$background-colors : ('background': #080B13,
+'background-navbar': rgba(#0A0A13, .8),
+'background-dark-blue': #1A1E28,
+'background-linear': linear-gradient(90deg, rgba(26, 30, 40, 0.48) 5.17%, rgba(26, 30, 40, 0.2304) 100%)
+);
